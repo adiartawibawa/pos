@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\HasUniqueSlug;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
@@ -9,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Role extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory, HasUuids, HasUniqueSlug;
 
     protected $fillable = ['name', 'slug'];
 
